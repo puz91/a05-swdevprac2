@@ -7,6 +7,11 @@ export default function Booking() {
 
             <DateReserve></DateReserve>
 
+            <button type="submit" name="Book Venue"
+                className="block rounded-md bg-sky-600">
+                Book Venue
+            </button>
+
         </main>
     );
 }

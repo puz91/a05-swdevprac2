@@ -10,41 +10,33 @@ export default function DateReserve() {
         <div className="bg-slate-100 rounded-lg space-x-5 space-y-2
         w-fit px-10 py-5 flex flex row justify-center">
 
-            {/* <TextField
+            <label htmlFor="name-lastname" className="block text-sm font-semibold text-gray-700">Name-Lastname</label>
+            <input
+                type="text"
+                id="name-lastname"
                 name="Name-Lastname"
-                label="Name-Lastname"
-                variant="standard"
-                fullWidth
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
+                className="MuiInput-input w-[200px] border-b border-gray-400 outline-none"
             />
 
-            <TextField
+            <label htmlFor="contact-number" className="block text-sm font-semibold text-gray-700">Contact-Number</label>
+            <input
+                type="text"
+                id="contact-number"
                 name="Contact-Number"
-                label="Contact-Number"
-                variant="standard"
-                fullWidth
-                value={contactNumber}
-                onChange={(e) => setContactNumber(e.target.value)}
-                required
-            /> */}
+                className="MuiInput-input w-[200px] border-b border-gray-400 outline-none"
+            />
 
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker className="bg-white"/>
-            </LocalizationProvider>
-
-            <Select variant="standard" name="venue" id="venue"
+            <Select variant="standard" name="venue"
             className="h-[2em] w-[200px]">
                 <MenuItem value="Bloom">The Bloom Pavilion</MenuItem>
                 <MenuItem value="Spark">Spark Space</MenuItem>
                 <MenuItem value="GrandTable">The Grand Table</MenuItem>
             </Select>
 
-            <button type="submit" name="Book Venue"
-                className="block rounded-md bg-sky-600">
-                Book Venue
-            </button>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker className="bg-white" label="Event Date"/>
+            </LocalizationProvider>
+
         </div>
     )
 }
